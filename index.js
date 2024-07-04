@@ -37,7 +37,7 @@ axios
   .get("https://raw.githubusercontent.com/kyan0045/catchtwo/main/index.js")
   .then(function (response) {
     var d = response.data;
-    let v = d.match(/Version ([0-9]*\.?)+/)[0]?.replace("Version ", "");
+    let v = d.match(/Version ([0-9]*\.?)+/)[0]?.replace("Version","");
     if (v) {
       console.log(chalk.bold("Version " + version));
       if (v !== version) {
